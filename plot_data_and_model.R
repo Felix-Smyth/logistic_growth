@@ -1,6 +1,6 @@
 #Script to plot data and model
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment.csv")
 
 logistic_fun <- function(t) {
   
@@ -10,13 +10,13 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+N0 <- 879 # from the excel file
   
-r <- ??? #
+r <- 0.01 #
   
-K <- ??? #
+K <- 5.993e+10 #
 
-ggplot(aes(???,???), data = growth_data) +
+ggplot(aes(t, N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
@@ -25,3 +25,7 @@ ggplot(aes(???,???), data = growth_data) +
   #scale_y_continuous(trans='log10')
 
 
+
+sink(file = "package-versions.txt")
+sessionInfo()
+sink()
