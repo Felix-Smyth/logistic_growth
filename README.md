@@ -30,7 +30,12 @@ The second model of this script was run on the plateaued stage of the logistic g
 
 
 ### Plotting logistic growth over data in plot_data_and_model.R ###
+This script forms a function for logistic growth requiring the calculated parameters of: starting population size (N0), the exponential growth rate (r) and the carrying capacity of the population (K). These calculated parameters from the simulated _E.coli_ data are then inputted into this function, producing a model logistic growth curve. This model curve was then plotted twice on top of the raw data from the experiment.csv file, with both no log transformation applied to the population y axis, and then a log base 10 transformation applied to the population y axis, just as in the first script. The logistic growth curve function was based upon the theory outlined in the README.md file of this repository: https://github.com/josegabrielnb/reproducible_research. 
+ 
 
+## Results found from linear models and placed into logistic growth function ## 
+N0 (starting population size of the culture) = 987 (3sf) 
+r (exponential growth rate) = 0.0100 (3sf) 
+K (carrying capacity) = 6x10^10
 
-## Results ## 
-
+The logistic function curve produced a fit very closely matching the observations of the raw simulated data.
