@@ -16,15 +16,15 @@ logistic_fun <- function(t) {
 # This function requires three inputs: The starting population size, the growth 
 # rate and the carrying capacity of the population
 
-N0 <- 982
+N0 <- 987
 # calculated from the intercept of the linear model representing the log of the 
 # exponential growth phase
   
-r <- 0.01
+r <- 0.0100
 # calculated from the gradient of the linear model representing the log of the 
 # exponential growth phase
   
-K <- 5.993e+10 
+K <- 5.979e+10 
 # calculated from the intercept of the second linear model where the population 
 # has reached carrying capacity
 
