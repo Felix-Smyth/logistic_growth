@@ -35,7 +35,7 @@ summary(model1)
 
 #Case 2. N(t) = K
 
-data_subset2 <- growth_data %>% filter(t>2000)
+data_subset2 <- growth_data %>% filter(t>2500)
 # Filtering the data set for when the population size of the culture plateaus 
 # and remains constant
 # This occurs when t is greater than 2000
