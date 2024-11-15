@@ -44,6 +44,8 @@ K (carrying capacity) = 6x10^10
 The logistic function curve produced a fit very closely matching the observations of the raw simulated data.
 
 
+
+
 # Question 2 # 
 Use your estimates of N0 and r to calculate the population size at t = 4980 min, assuming that the population grows exponentially. How does it compare to the population size predicted under logistic growth?
 
@@ -64,3 +66,9 @@ K = carrying capacity
 Therefore the population size of the bacteria culture at 4980 minutes = 987 x (1+0.0100)^ 4980
 
 = 3.27 x10^24 (3sf)
+
+
+
+# Question 3 #
+Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage. 
+
