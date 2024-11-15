@@ -24,21 +24,43 @@ This script aims to measure the required logistic growth model parameters of: st
 
 Note: This script requires the dplyr package that enables piping to be used within the code. 
 
-The first linear model is used to measure the exponential growth rate and the starting population size of the growth culture of _E.coli._ This step is modelled on the exponential stage of the culture growth. In order to section this period of the time values off and convert the exponential stage to a linear relationship appropriate for linear analysis, the data was subsetted followed by the addition of a column represeting the log of the population size. Visualised on the second graph of the plot_data.R script, the time of the data were subsetted to only include values below 1500 minutes, identifying the exponential stage of the growth. Following this an additional column to the subsetted data was added that displayed the log base e of the population size at each respective time interval. After running and summarising a linear model on this now linear relationship between time and the natural log of the population size (N), the model intercept indicated the natural log of the starting population (N0) while the gradient indicated the exponential growth rate (r). 
+The first linear model is used to measure the exponential growth rate and the starting population size of the growth culture of _E.coli._ This step is modelled on the exponential stage of the culture growth. In order to section this period of the time values off and convert the exponential stage to a linear relationship appropriate for linear analysis, the data was subsetted followed by the addition of a column represeting the log of the population size. Visualised on the second graph of the plot_data.R script, the time of the data were subsetted to only include values below 1500 minutes, identifying the exponential stage of the growth. Following this an additional column to the subsetted data was added that displayed the log base e of the population size at each respective time interval. After running and summarising a linear model on this now linear relationship between time and the natural log of the population size (N), the model intercept indicated the natural log of the starting population (N0) while the gradient indicated the growth rate (r). 
 
 The second model of this script was run on the plateaued stage of the logistic growth curve seen in plot_data.R. This did not make use of a log transformation and ran a linear model between the population size and 1 (based on the assumption that the line was completely horizontal). The data was subsetted where only time values above 2500 were included in order to identify only the section of the growth curve where the population size (N) equalled that of the carrying capacity. After running and summarising this model, the model intercept informed of the carrying capacity of the population (K). 
 
 
 ### Plotting logistic growth over data in plot_data_and_model.R ###
-This script forms a function for logistic growth requiring the calculated parameters of: starting population size (N0), the exponential growth rate (r) and the carrying capacity of the population (K). These calculated parameters from the simulated _E.coli_ data are then inputted into this function, producing a model logistic growth curve. This model curve was then plotted twice on top of the raw data from the experiment.csv file, with both no log transformation applied to the population y axis, and then a log base 10 transformation applied to the population y axis, just as in the first script. The logistic growth curve function was based upon the theory outlined in the README.md file of this repository: https://github.com/josegabrielnb/reproducible_research. 
+This script forms a function for logistic growth requiring the calculated parameters of: starting population size (N0), the growth rate (r) and the carrying capacity of the population (K). These calculated parameters from the simulated _E.coli_ data are then inputted into this function, producing a model logistic growth curve. This model curve was then plotted twice on top of the raw data from the experiment.csv file, with both no log transformation applied to the population y axis, and then a log base 10 transformation applied to the population y axis, just as in the first script. The logistic growth curve function was based upon the theory outlined in the README.md file of this repository: https://github.com/josegabrielnb/reproducible_research. 
  
 
 ## Results found from linear models and placed into logistic growth function ## 
 N0 (starting population size of the culture) = 987 (3sf) 
 
-r (exponential growth rate) = 0.0100 (3sf) 
+r (growth rate) = 0.0100 (3sf) 
 
 K (carrying capacity) = 6x10^10
 
 
 The logistic function curve produced a fit very closely matching the observations of the raw simulated data.
+
+
+# Question 2 # 
+Use your estimates of N0 and r to calculate the population size at t = 4980 min, assuming that the population grows exponentially. How does it compare to the population size predicted under logistic growth?
+
+### Answer ###
+An exponential model of bacterial growth assumes that the growth rate of the population at any given time is proportional to the population size and the growth rate. Therefore the population does not experience a population plateau and gradient of population increase continues to rise through time. In exponential growth the population increases per unit time compound on one another. A fixed growth rate results in the addition of the same proportion of the population in each successive time intervals. Therefore, as the population grows, the number of individuals being added after each time interval increases. 
+
+The equation for exponential growth can be represented as can be represented as
+`N = N0(1+r)^t`
+
+Where:
+
+N0 = starting population size of the culture
+
+r = growth rate
+
+K = carrying capacity
+
+Therefore the population size of the bacteria culture at 4980 minutes = 987 x (1+0.0100)^ 4980
+
+= 3.27 x10^24 (3sf)
