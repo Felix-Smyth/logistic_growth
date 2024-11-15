@@ -35,7 +35,10 @@ This script forms a function for logistic growth requiring the calculated parame
 
 ## Results found from linear models and placed into logistic growth function ## 
 N0 (starting population size of the culture) = 987 (3sf) 
+
 r (exponential growth rate) = 0.0100 (3sf) 
+
 K (carrying capacity) = 6x10^10
+
 
 The logistic function curve produced a fit very closely matching the observations of the raw simulated data.
