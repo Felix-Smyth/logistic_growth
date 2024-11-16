@@ -25,6 +25,7 @@ r <- 0.0100
 # exponential growth phase
   
 K <- 6e+10 
+
 # calculated from the intercept of the second linear model where the population 
 # has reached carrying capacity
 
