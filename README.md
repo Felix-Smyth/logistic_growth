@@ -76,6 +76,7 @@ Code and annotations can be found in the exponential_logistic_comparison.R file 
 
 Below shows the graph comparing the logistic model and exponential model of growth over the same time period as the experiment.csv data was simulated for. In order to not have the raw simulated data also on the plot, this script created a new data frame from the time periods outlined in the raw data and with the predicted population sizes for each model at each respective time interval. This dataframe was then plotted with the addition of the function lines to link the data points. A log base 10 transformation was added to enable greater visualisation of distinction between the two curve. This choice is due to the fact that without a log tranformation, the exponential population size counts dwarf those of the logistic growth and therefore the pattern of logistic growth is challenging to view on the same plot. 
 
-![Comparison Plot of Exponential and Logistic Models of _Escherichia coli_ growth] (model_comparisons.png)
+### Comparison graph ###
 
+![Graph](model_comparisons.png)
 
