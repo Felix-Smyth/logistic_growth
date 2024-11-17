@@ -72,11 +72,13 @@ Therefore the population size of the bacteria culture at 4980 minutes = 987 x (1
 # Question 3 #
 Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage. 
 
+### Answers ###
+
 Code and annotations can be found in the exponential_logistic_comparison.R file of the repository. 
 
-Below shows the graph comparing the logistic model and exponential model of growth over the same time period as the experiment.csv data was simulated for. In order to not have the raw simulated data also on the plot, this script created a new data frame from the time periods outlined in the raw data and with the predicted population sizes for each model at each respective time interval. This dataframe was then plotted with the addition of the function lines to link the data points. A log base 10 transformation was added to enable greater visualisation of distinction between the two curve. This choice is due to the fact that without a log tranformation, the exponential population size counts dwarf those of the logistic growth and therefore the pattern of logistic growth is challenging to view on the same plot. 
+Below shows the graph comparing the logistic model and exponential model of growth over the same time period the experiment.csv data was simulated for. In order to not have the raw simulated data also on the plot, this script created a new data frame from the time periods outlined in the raw data with the addition of the predicted population sizes for each model at each respective time interval. This dataframe was then plotted with the addition of the function lines to link the data points. A log base 10 transformation was added to enable greater visualisation of distinction between the two curves. This choice is due to the fact that without a log tranformation, the exponential population size counts dwarf those of the logistic growth and the pattern of logistic growth is challenging to view on the same plot. 
 
-### Comparison graph ###
+### Comparison graph: ###
 
 ![Graph](model_comparisons.png)
 
